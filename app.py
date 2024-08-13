@@ -3,7 +3,7 @@ import streamlit as st
 from pathlib import Path
 from PIL import Image
 
-from sections import timeline
+from sections import timeline, about_me
 
 # --- PATH SETTINGS ---
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
@@ -15,7 +15,7 @@ profile_pic = current_dir / "assets" / "images" / "profile-pic.png"
 PAGE_TITLE = "Jordi Ricard Onrubia Palacios"
 PAGE_ICON = ":desktop_computer:"
 NAME = "Jordi Ricard Onrubia Palacios"
-DESCRIPTION = """"""
+DESCRIPTION = """Software and Data Engineer"""
 
 SOCIAL_MEDIA = [
     {"icon": "fa-solid fa-envelope", "link": "jordirop.professional@gmail.com", "text": "jordirop.professional@gmail.com"},
@@ -24,7 +24,7 @@ SOCIAL_MEDIA = [
     {"icon": "fa-brands fa-twitter", "link": "https://twitter.com/JordiRicardOnru", "text": "JordiRicardOnru"}
 ]
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="wide")
+st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON, layout="centered")
 st.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>',
          unsafe_allow_html=True)
 with open(css_file) as f:
@@ -36,7 +36,7 @@ with open(resume_file, "rb") as pdf_file:
 profile_pic = Image.open(profile_pic)
 
 # --- HERO SECTION ---
-blank, col1, col2 = st.columns([0.25, 0.25, 0.5], gap="small")
+col1, col2 = st.columns([1, 3], gap="small")
 with col1:
     st.image(profile_pic, use_column_width="auto")
 with col2:
@@ -53,19 +53,23 @@ with col2:
             social['icon'], social['link'], social['text']),
             unsafe_allow_html=True)
 
-about_me, tech_xp, acad_xp, edu, add_act = st.tabs(["About Me",
+about, tech_xp, acad_xp, edu, add_act = st.tabs(["About Me",
                                                     "Professional Experience",
                                                     "Academic Experience",
                                                     "Education",
                                                     "Additional Activities"])
 
-with about_me:
-    pass
+with about:
+    about_me.set_about_me()
 with tech_xp:
-    pass
+    timeline.set_prof_experience()
 with acad_xp:
     timeline.set_academic_experience()
 with edu:
     timeline.set_education()
 with add_act:
     timeline.set_additional_activities()
+
+
+footer = '</style> <div class="footer"> <p>Made with :heart: by Jordi Onrubia Palacios</p> </div>'
+st.markdown(footer, unsafe_allow_html=True)

@@ -1,5 +1,5 @@
 import streamlit as st
-from constants import academic_xp, education, others
+from constants import tech_xp, academic_xp, education, others
 
 from PIL import Image
 from pathlib import Path
@@ -10,7 +10,14 @@ images_dir = current_dir / ".." / "assets" / "images"
 
 
 def set_prof_experience():
-    pass
+    for field in tech_xp.FIELDS:
+        st.subheader(field.get("subheader"), divider="gray")
+        st.write(field.get("date"))
+        if type(field.get("text")) == str:
+            st.write(field.get("text"))
+        else:
+            for txt in field.get("text"):
+                st.write(txt)
 
 
 def set_academic_experience():
@@ -47,7 +54,7 @@ def set_education():
     for course in education.COURSES:
         st.subheader(course.get("title"))
         st.write(course.get("description"))
-        st.markdown("<a href='mailto: {}'>\t{}</a>".format(
+        st.markdown("<a href='{}'>\t{}</a>".format(
             course.get("credential"), "Certificate"),
             unsafe_allow_html=True)
 
@@ -59,4 +66,3 @@ def set_additional_activities():
             st.subheader(field.get("subheader"))
         for text in field.get("text"):
             (st.markdown(text))
-
