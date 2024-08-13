@@ -25,18 +25,12 @@
     }
 }
 
-img {
-}
-
 .block-container {
     width: 100%;
     padding-bottom: 1rem;
     margin-right: auto;
     margin-left: auto;
 }
-
-
-
 
 a {
     text-decoration: none;
@@ -58,8 +52,11 @@ hr {
     margin-bottom: 5%;
 }
 
+.footer p {
+    margin: 0;
+}
+
 .footer {
-    position: absolut;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -70,5 +67,4 @@ hr {
 }
 
 # MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
 header {visibility: hidden;}

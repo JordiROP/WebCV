@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from sections import timeline, about_me
+from sections import timeline, about_me, footer
 from constants import home
 
 st.set_page_config(page_title=home.PAGE_TITLE, page_icon=home.PAGE_ICON, layout="centered")
@@ -21,7 +21,7 @@ with col1:
     st.image(profile_pic, use_column_width="auto")
 with col2:
     st.title(home.NAME)
-    st.write(home.DESCRIPTION)  
+    st.write(home.DESCRIPTION)
     st.download_button(
         label=" 📄 Download Resume",
         data=PDFbyte,
@@ -50,5 +50,4 @@ with edu:
 with add_act:
     timeline.set_additional_activities()
 
-footer = '</style> <div class="footer"> <p>Made with :heart: by Jordi Onrubia Palacios</p> </div>'
-st.markdown(footer, unsafe_allow_html=True)
+footer.set_footer()

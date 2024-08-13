@@ -10,7 +10,6 @@ CUDA.
 I can be described as a "Jack of all trades", due my previous jobs and my will to help anyone who needs it I become a 
 person capable of perform pretty well in any case scenario, I love learning new technologies and improving my skills.
 
-
 Although I spend most of the time working, I like to use my free time to enjoy myself playing video-games, going to 
 the Gym, and dance Salsa. 
 """
