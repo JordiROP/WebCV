@@ -40,8 +40,8 @@ TEXT_FZTH = ["""The aim of the course is to develop and acquire the necessary kn
 TECNOLOGIES_FZTH = ["python.png", "colab.png"]
 
 FIELDS = [
-    {"subheader": SUBHEADER_SCP, "text": TEXT_SCP, "tech": TECNOLOGIES_SCP},
-    {"subheader": SUBHEADER_PROGCOMIII, "text": TEXT_PROGCOMIII, "tech": TECNOLOGIES_PROGCOMIII},
-    {"subheader": SUBHEADER_HPC, "text": TEXT_HPC, "tech": TECNOLOGIES_HPC},
-    {"subheader": SUBHEADER_FZTH, "text": TEXT_FZTH, "tech": TECNOLOGIES_FZTH}
+    {"subheader": SUBHEADER_SCP, "text": TEXT_SCP, "technologies": TECNOLOGIES_SCP},
+    {"subheader": SUBHEADER_PROGCOMIII, "text": TEXT_PROGCOMIII, "technologies": TECNOLOGIES_PROGCOMIII},
+    {"subheader": SUBHEADER_HPC, "text": TEXT_HPC, "technologies": TECNOLOGIES_HPC},
+    {"subheader": SUBHEADER_FZTH, "text": TEXT_FZTH, "technologies": TECNOLOGIES_FZTH}
 ]

@@ -26,22 +26,23 @@ TEXT_DAM = """The general competence of this course is to develop, implement, do
 computer applications, using specific technologies and development environments, guaranteeing access to data in a 
 secure manner and meeting the criteria of use and quality required by the established standards."""
 
+
 HEADER_OTHER = "Courses and Certifications"
 COURSES = [
-    {"title": "Spark and Scala at Databricks: Big Data and data engineering",
-     "description": """The objective of this course is to learn how to work with the main Spark abstractions, 
+    {"subheader": "Spark and Scala at Databricks: Big Data and data engineering",
+     "text": """The objective of this course is to learn how to work with the main Spark abstractions, 
      which are RDDs and DataFrames. Know the operation and structure of Apache Spark; Work with Spark RDDs from basic 
      to advanced levels; Work with DataFrames in Spark using the SQL API from basic to advanced levels; 
      Optimize your Apache Spark applications for handling large volumes of data through DataFrames""",
      "credential": "https://www.udemy.com/certificate/UC-2dd12796-fb6f-4229-80a8-ae14ff6951bc/"},
-    {"title": "DeepLearning.AI TensorFlow Developer",
-     "description": """This course covers key areas for developing proficiency in TensorFlow. For computer vision, 
+    {"subheader": "DeepLearning.AI TensorFlow Developer",
+     "text": """This course covers key areas for developing proficiency in TensorFlow. For computer vision, 
      it emphasizes handling real-world image data and preventing overfitting through techniques like augmentation and 
      dropout. For natural language processing, building models using RNNs, GRUs, and LSTMs while training on text 
      repositories is highlighted.""",
      "credential": "https://www.coursera.org/account/accomplishments/professional-cert/ZBS5XKZN5WTA"},
-    {"title": "DeepLearning.AI Deep Learning Specialization",
-     "description": """This course covers the core concepts of deep learning, equipping learners to construct 
+    {"subheader": "DeepLearning.AI Deep Learning Specialization",
+     "text": """This course covers the core concepts of deep learning, equipping learners to construct 
      and optimize neural networks. A strong emphasis is placed on practical applications, with in-depth exploration of 
      computer vision techniques, including object detection, recognition, and artistic style transfer through 
      Convolutional Neural Networks (CNNs). Additionally, the curriculum covers Natural Language Processing (NLP) tasks 

@@ -1,7 +1,7 @@
 HEADER_PROJECTS = "Projects"
 SUBHEADER_HACKEPS = "LleidaHack"
 TEXT_HACKEPS = ["""Co-Founder and General Secretary (2021-2022) of the Non-Profit Association LleidaHack, 
-founded with the purpose of expanding the technological knowledge around the territory of Lleida.""",
+                founded with the purpose of expanding the technological knowledge around the territory of Lleida.""",
                 """The different activities organized by LleidaHack are:""",
 
                 """
@@ -30,7 +30,7 @@ HEADER_VOLUNT = "Volunteering"
 TEXT_VOLUNT = ["""
                 - Organizer at HackUPC 2023: Provided assistance on the development during the event.
                 
-                - Mentor at HackUPC: Helped the hackers during the event by providing support in means of code, 
+                - Mentor at HackUPC: Assisted the hackers during the event by providing support in means of code, 
                 technologies and solutions for the different type of problems during the development of the hackers
                 challenge solution.
                 """]
