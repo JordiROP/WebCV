@@ -1,7 +1,9 @@
 import streamlit as st
+from streamlit_extras.stylable_container import stylable_container
 from PIL import Image
 from sections import timeline, about_me, footer
 from constants import home
+from utils import image_processing
 
 st.set_page_config(page_title=home.PAGE_TITLE, page_icon=home.PAGE_ICON, layout="centered")
 st.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>',
@@ -16,22 +18,33 @@ with open(home.RESUME_FILE, "rb") as pdf_file:
 profile_pic = Image.open(home.PROFILE_PIC)
 
 # --- HERO SECTION ---
-col1, col2 = st.columns([1, 3], gap="small")
-with col1:
-    st.image(profile_pic, use_column_width="auto")
-with col2:
-    st.title(home.NAME)
-    st.write(home.DESCRIPTION)
-    st.download_button(
-        label=" 📄 Download Resume",
-        data=PDFbyte,
-        file_name=home.RESUME_FILE.name,
-        mime="application/octet-stream",
-    )
-    for social in home.SOCIAL_MEDIA:
-        st.markdown("<i class='{}'></i><a href='mailto: {}'>\t{}</a>".format(
-            social['icon'], social['link'], social['text']),
-            unsafe_allow_html=True)
+with stylable_container(
+        key="hero_container",
+        css_styles="""
+                {
+                    border: 1px solid rgba(49, 51, 63, 0.2);
+                    border-radius: 10px;
+                    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+                }"""):
+    col1, col2 = st.columns([1, 3], gap="small")
+    with col1:
+        st.markdown(f"""<img title="profile-image" class="profile-image" 
+                        src="data:image/png;base64,{image_processing.image_to_bytes(home.PROFILE_PIC)}">""",
+                    unsafe_allow_html=True)
+    with col2:
+        with st.container():
+            st.title(home.NAME)
+            st.write(home.DESCRIPTION)
+            st.download_button(
+                label=" 📄 Download Resume",
+                data=PDFbyte,
+                file_name=home.RESUME_FILE.name,
+                mime="application/octet-stream",
+            )
+            for social in home.SOCIAL_MEDIA:
+                st.markdown("<i class='{}'></i><a href='mailto: {}'>\t{}</a>".format(
+                    social['icon'], social['link'], social['text']),
+                    unsafe_allow_html=True)
 
 about, tech_xp, acad_xp, edu, add_act = st.tabs(["About Me",
                                                  "Professional Experience",
