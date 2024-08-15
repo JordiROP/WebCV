@@ -33,17 +33,23 @@ with stylable_container(
                     unsafe_allow_html=True)
     with col2:
         with st.container():
-            st.title(home.NAME)
-            st.write(home.DESCRIPTION)
-            st.download_button(
-                label=" 📄 Download Resume",
-                data=PDFbyte,
-                file_name=home.RESUME_FILE.name,
-                mime="application/octet-stream",
-            )
-            for social in home.SOCIAL_MEDIA:
-                st.markdown("<i class='{}'></i><a href='mailto: {}'>\t{}</a>".format(
-                    social['icon'], social['link'], social['text']),
+            st.markdown(home.NAME, unsafe_allow_html=True)
+            st.markdown(home.DESCRIPTION, unsafe_allow_html=True)
+            with stylable_container(key="resume", css_styles="""{text-align: center; margin-top: 1rem}"""):
+                st.download_button(
+                    label=" 📄 Download Resume",
+                    data=PDFbyte,
+                    file_name=home.RESUME_FILE.name,
+                    mime="application/octet-stream",
+                )
+            st.markdown("<h4 style='text-align: center'>My Socials:</h4>", unsafe_allow_html=True)
+            with stylable_container(key="socials", css_styles="""{text-align: center}"""):
+                st.markdown(
+                    f"""
+                    <a href='mailto:{home.SOCIAL_MEDIA[0]['link']}'>\t<i class='{home.SOCIAL_MEDIA[0]['icon']}'></i></a>
+                    <a href='{home.SOCIAL_MEDIA[1]['link']}'>\t<i class='{home.SOCIAL_MEDIA[1]['icon']}'></i></a>
+                    <a href='{home.SOCIAL_MEDIA[2]['link']}'>\t<i class='{home.SOCIAL_MEDIA[2]['icon']}'></i></a>
+                    <a href='{home.SOCIAL_MEDIA[3]['link']}'>\t<i class='{home.SOCIAL_MEDIA[3]['icon']}'></i></a>""",
                     unsafe_allow_html=True)
 
 about, tech_xp, acad_xp, edu, add_act = st.tabs(["About Me",

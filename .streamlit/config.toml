@@ -1,2 +1,5 @@
 [theme]
-base = "light"
+primaryColor="#cc0000"
+backgroundColor="#FFFF"
+textColor="#31333F"
+font="Readex Pro"

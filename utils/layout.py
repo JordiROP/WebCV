@@ -57,7 +57,7 @@ def multiboxed_element_group(header: str, elements: list, key: str, **kwargs):
                             box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
                         }"""):
         with st.container(border=True):
-            st.header(header, divider=kwargs.get("header_divider", "gray"))
+            st.header(header, divider=kwargs.get("header_divider", "grey"))
             for field in elements:
                 with stylable_container(
                         key=f"{key}_{field.get("subheader").lower().replace(" ", "_")}",

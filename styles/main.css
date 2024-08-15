@@ -70,5 +70,24 @@ hr {
     text-align: center;
 }
 
+.fa-linkedin {
+    color: #0072b1;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-github {
+    color: #171515;
+}
+
+.fa-3xl {
+    margin-top: 2rem;
+    font-size: 4rem;
+    line-height: .03125em;
+    margin-left: 2rem;
+    vertical-align: -.1875em;
+}
 # MainMenu {visibility: hidden;}
-header {visibility: hidden;}
+# header {visibility: hidden;}
