@@ -33,8 +33,9 @@ with stylable_container(
                     unsafe_allow_html=True)
     with col2:
         with st.container():
-            st.markdown(home.NAME, unsafe_allow_html=True)
-            st.markdown(home.DESCRIPTION, unsafe_allow_html=True)
+            with stylable_container(key="name-desc", css_styles="""{text-align: center; margin-top: 1rem}"""):
+                st.markdown(home.NAME, unsafe_allow_html=True)
+                st.markdown(home.DESCRIPTION, unsafe_allow_html=True)
             with stylable_container(key="resume", css_styles="""{text-align: center; margin-top: 1rem}"""):
                 st.download_button(
                     label=" 📄 Download Resume",
@@ -42,8 +43,7 @@ with stylable_container(
                     file_name=home.RESUME_FILE.name,
                     mime="application/octet-stream",
                 )
-            st.markdown("<h4 style='text-align: center'>My Socials:</h4>", unsafe_allow_html=True)
-            with stylable_container(key="socials", css_styles="""{text-align: center}"""):
+            with stylable_container(key="socials", css_styles="""{text-align: center; margin-top: 1rem}"""):
                 st.markdown(
                     f"""
                     <a href='mailto:{home.SOCIAL_MEDIA[0]['link']}'>\t<i class='{home.SOCIAL_MEDIA[0]['icon']}'></i></a>
