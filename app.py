@@ -5,9 +5,11 @@ from sections import timeline, about_me, footer
 from constants import home
 from utils import image_processing
 
+
 st.set_page_config(page_title=home.PAGE_TITLE, page_icon=home.PAGE_ICON, layout="centered")
 st.write('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>',
          unsafe_allow_html=True)
+
 
 with open(home.CSS_FILE) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
