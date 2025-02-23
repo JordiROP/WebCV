@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Tabs from "@/app/components/Tabs"
 import { Readex_Pro } from 'next/font/google';
 import clsx from 'clsx';
