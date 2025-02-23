@@ -9,12 +9,12 @@ export default function Header() {
       </CardHeader>
       <hr className="card-divider"></hr>
       <CardBody>
-        <p>Hello and welcome to my website! I'm a Software and Data engineer graduated with a Master's degree in Computer Engineering with a major in Big Data at UdL, 
+        <p>Hello and welcome to my website! I&apos;m a Software and Data engineer graduated with a Master&apos;s degree in Computer Engineering with a major in Big Data at UdL, 
           currently working in Bluetab, an IBM Company as a developer, providing assistance in the productivization of GenAI applications. 
           In addition, I currently impart the subjects of Programming and Communications III to Electronics Degree students, teaching fundamentals about networking, 
           databases and APIs with Python; High Performance Computing, teaching fundamentals about distributed computing with OpenMP, MPI and CUDA.</p>
         <br></br>
-        <p>Hello and welcome to my website! I'm a Software and Data engineer graduated with a Master's degree in Computer Engineering with a major in Big Data at UdL, 
+        <p>Hello and welcome to my website! I&apos;m a Software and Data engineer graduated with a Master&apos;s degree in Computer Engineering with a major in Big Data at UdL, 
           currently working in Bluetab, an IBM Company as a developer, providing assistance in the productivization of GenAI applications. In addition, I currently impart 
           the subjects of Programming and Communications III to Electronics Degree students, teaching fundamentals about networking, databases and APIs with Python; 
           High Performance Computing, teaching fundamentals about distributed computing with OpenMP, MPI and CUDA.</p>
