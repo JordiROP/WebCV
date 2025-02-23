@@ -1,21 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #31333f;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.tab-divider {
+  height: 2px; 
+  background-color: rgb(213, 218, 229) !important;
+}
+
+.card-divider {
+  width: 98%;
+  margin: auto;
+  height: 2px; 
+  background-color: rgb(213, 218, 229) !important;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
