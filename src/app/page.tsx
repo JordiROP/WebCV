@@ -9,7 +9,7 @@ export default function Home() {
         <Tabs />
       </main>
       <footer className="row-start-3 gap-6 flex-wrap items-center justify-center">
-        <p className="text-center">Built with <a href="https://nextjs.org/">Next.js by Vercel</a> 💻</p>
+        <p className="text-center">Built with <a href="https://nextjs.org/" className="text-blue-500 hover:text-blue-800 hover:underline">Next.js</a> by Vercel 💻</p>
         <p>Made with ❤️ by Jordi R. Onrubia Palacios</p>
       </footer>
     </div>

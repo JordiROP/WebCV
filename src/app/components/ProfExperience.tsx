@@ -23,7 +23,7 @@ const ProfExpCard: React.FC<ProfExpCardDef> = ({title, date, text}) => (
 
 export default function ProfExpCardList() {
     return (
-      <div className="flex flex-wrap gap-4 pt-4 pb-4">
+      <div className="flex flex-wrap gap-4 pb-4">
         {profExperience.map((item, index) => (
           <ProfExpCard key={index} title={item.title} date={item.date} text={item.text} />
         ))}

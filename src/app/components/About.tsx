@@ -1,26 +1,22 @@
 import {Card, CardHeader, CardBody} from "@heroui/react";
+import {about} from "@/app/constants/about"
 
-
-export default function Header() {
+export default function AboutMe() {
   return (
     <Card className="w-full">
       <CardHeader>  
-          <h3 className="font-bold text-3xl">Get To Know Me a Bit</h3>
+          <h3 className="font-bold text-3xl">{about.title}</h3>
       </CardHeader>
       <hr className="card-divider"></hr>
-      <CardBody>
-        <p>Hello and welcome to my website! I&apos;m a Software and Data engineer graduated with a Master&apos;s degree in Computer Engineering with a major in Big Data at UdL, 
-          currently working in Bluetab, an IBM Company as a developer, providing assistance in the productivization of GenAI applications. 
-          In addition, I currently impart the subjects of Programming and Communications III to Electronics Degree students, teaching fundamentals about networking, 
-          databases and APIs with Python; High Performance Computing, teaching fundamentals about distributed computing with OpenMP, MPI and CUDA.</p>
-        <br></br>
-        <p>Hello and welcome to my website! I&apos;m a Software and Data engineer graduated with a Master&apos;s degree in Computer Engineering with a major in Big Data at UdL, 
-          currently working in Bluetab, an IBM Company as a developer, providing assistance in the productivization of GenAI applications. In addition, I currently impart 
-          the subjects of Programming and Communications III to Electronics Degree students, teaching fundamentals about networking, databases and APIs with Python; 
-          High Performance Computing, teaching fundamentals about distributed computing with OpenMP, MPI and CUDA.</p>
-        <br></br>
-        <p>Although I spend most of the time working, I like to use my free time to enjoy myself playing video-games, going to the Gym, and dance Salsa.</p>
-      </CardBody>
+      <div className="flex flex-wrap gap-4 pb-4">
+        <CardBody>
+          <p>{about.upText}</p>
+          <br></br>
+          <p>{about.midText}</p>
+          <br></br>
+          <p>{about.botText}</p>
+        </CardBody>
+        </div>
     </Card>
   );
 }

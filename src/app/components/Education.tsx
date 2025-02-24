@@ -1,10 +1,11 @@
 import {Card, CardHeader, CardBody} from "@heroui/react";
-import {education} from "@/app/constants/education"
+import {education} from "@/app/constants/education";
 
 type EduCardDef = {
     title: string,
     body: EduCardBodyDef[]
 }
+
 type EduCardBodyDef = {
     subtitle: string;
     date: string | null;
@@ -38,7 +39,7 @@ const EduCardBody: React.FC<EduCardBodyDef> = ({subtitle, date, text, credential
 
 export default function EduCardList() {
     return (
-      <div className="flex flex-wrap gap-4 pt-4 pb-4">
+      <div className="flex flex-wrap gap-4 pb-4">
         {education.map((item, index) => (
           <EduCard key={index} title={item.title} body={item.body} />
         ))}

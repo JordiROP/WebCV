@@ -1,7 +1,8 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@radix-ui/react-tabs';
-import Header from "@/app/components/About";
+import AboutMe from "@/app/components/About";
 import ProfExpCardList from '@/app/components/ProfExperience';
 import EduCardList from '@/app/components/Education';
+import AcadExpCardList from '@/app/components/AcadExperience';
 import '@/app/globals.css';
 export default function MyTabs() {
   return (
@@ -15,13 +16,13 @@ export default function MyTabs() {
       </TabsList>
       <hr className="tab-divider mt-4 mb-5"></hr>   
     <TabsContent value="aboutMe">
-        <Header />  
+        <AboutMe />  
     </TabsContent>
     <TabsContent value="profExperience">
         <ProfExpCardList />  
     </TabsContent>
     <TabsContent value="acadExperience">
-        <p>This is the Settings tab content.</p>
+        <AcadExpCardList />  
     </TabsContent>
     <TabsContent value="education">
         <EduCardList />

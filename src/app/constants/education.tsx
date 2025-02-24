@@ -5,7 +5,7 @@ export const education = [
             {
                 subtitle: "Masters Degree, Computer Engineering, major in Big Data",
                 date: "2019-2021",
-                text: `The Master in Computer Engineering has brought me a totally practical way to the most innovative methodologies and technologies in the 
+                text: `The Master in Computer Engineering has brought me a totally practical way to the most innovative methodologies and technologies in the
                         different areas of computer science, at the same time that has prepared me to integrate into large computer projects as well as direct, 
                         coordinate and plan them.`,
                 credential: null
