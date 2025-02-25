@@ -3,6 +3,7 @@ import Header from "@/app/components/Header"
 import { Readex_Pro } from 'next/font/google';
 import clsx from 'clsx';
 const readexPro = Readex_Pro({ subsets: ['latin'] });
+
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
