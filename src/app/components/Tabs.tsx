@@ -3,6 +3,7 @@ import AboutMe from "@/app/components/About";
 import ProfExpCardList from '@/app/components/ProfExperience';
 import EduCardList from '@/app/components/Education';
 import AcadExpCardList from '@/app/components/AcadExperience';
+import Activities from '@/app/components/Activities';
 import '@/app/globals.css';
 export default function MyTabs() {
   return (
@@ -28,7 +29,7 @@ export default function MyTabs() {
         <EduCardList />
     </TabsContent>
     <TabsContent value="additional">
-        <p>This is the Settings tab content.</p>
+      <Activities />
     </TabsContent>
     </Tabs>
   );

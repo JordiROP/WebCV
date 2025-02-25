@@ -1,7 +1,6 @@
 import {Card, CardHeader, CardBody} from "@heroui/react";
-import {about} from "@/app/constants/about"
 
-export default function AboutMe() {
+export default function Header() {
   return (
     <div className="flex flex-wrap gap-4 pb-4">
       <Card className="w-full">

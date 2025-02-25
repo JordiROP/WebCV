@@ -33,7 +33,11 @@ const AcadExpCardBody: React.FC<AcadExpCardBodyDef> = ({title, body, techs}) => 
             <h4 className="font-bold text-3xl">{title}</h4>
         </CardHeader>
         <CardBody>
-            <p>{body}</p>
+            {body.split("\n").map((line, index) => (
+                <><p key={index}>{line}</p><br></br></>
+            ))}
+            <br></br>
+            <p>Technologies:</p>
             <div className="flex items-center">
                 {techs.map((img, index) => (
                 <div key={index}>
