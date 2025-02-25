@@ -21,6 +21,10 @@
   background-color: rgb(213, 218, 229) !important;
 }
 
+.profile-image-radius {
+  border-radius: 10px 0 0 10px;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
